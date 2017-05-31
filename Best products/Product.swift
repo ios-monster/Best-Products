@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import FirebaseDatabase
+import Firebase
 import UIKit
 
 class Product {
@@ -120,17 +122,43 @@ class Comment {
     self.dateAdded = dateAdded
     self.rating = rating
   }
-}
-
-
-
-func new() {
+  
   
 }
 
 
+struct BUser {
+  
+  var ref: FIRDatabaseReference?
+  var key: String?
+  var fullname:String?
+  var email:String?
+  var profileImageUrl:String?
+  
+  //  var commentsPosted:[Comment]?
+  //  var favouritesProducts:[Product]?
+  //  var productsOnBasket:[Product]?
+  
+//  init(ref: FIRDatabaseReference?, key: String, fullname: String, email:String, profileImageUrl:String?) {
+//    self.ref = ref
+//    self.key = key
+//    self.fullname = fullname
+//    self.email = email
+//    self.profileImageUrl = profileImageUrl
+//  }
+//  
+  init(snapshot:FIRDataSnapshot) {
+    let dict = snapshot.value as? NSDictionary
+    
+    self.ref = snapshot.ref
+    self.key = snapshot.key
+    self.fullname = dict?["fullname"] as? String
+    self.email = dict?["email"] as? String
+    self.profileImageUrl = dict?["profileImageUrl"] as? String
+}
 
-
+  
+}
 
 
 

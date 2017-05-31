@@ -10,12 +10,12 @@ import UIKit
 import FirebaseAuth
 import FirebaseDatabase
 import FirebaseStorage
+import SCLAlertView
+
 
 class SignUpVC: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
   
-  let databaseRef = FIRDatabase.database().reference()
-  let storageRef = FIRStorage.storage().reference()
-  
+  let networkService = NetworkingService()
   
   @IBOutlet var profileImage: UIImageView!
   @IBOutlet var fullnameTF: HoshiTextField!
@@ -28,9 +28,7 @@ class SignUpVC: UIViewController, UINavigationControllerDelegate, UIImagePickerC
     super.viewDidLoad()
     
     imagePicker.delegate = self
-    
     profileImage.layer.cornerRadius = profileImage.frame.height / 2
-    
     let imageTap = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
     profileImage.isUserInteractionEnabled = true
     profileImage.addGestureRecognizer(imageTap)
@@ -82,47 +80,55 @@ class SignUpVC: UIViewController, UINavigationControllerDelegate, UIImagePickerC
   
   @IBAction func signUpBtnTapped(_ sender: Any) {
     
+    guard let fullname = fullnameTF.text?.condenseWhitespace() else {
+      return
+    }
+    guard let email = emailTF.text?.condenseWhitespace() else {
+      return
+    }
+    guard let password = passwordTF.text  else {
+      return
+    }
     
-    FIRAuth.auth()?.createUser(withEmail: emailTF.text!, password: passwordTF.text!, completion: { (user, error) in
-      let dict = ["email" : self.emailTF.text!, "fullname": self.fullnameTF.text!, "profileUrl": self.profileUrl]
-      if error == nil {
-        self.dismiss(animated: true, completion: nil)
-        print("user created")
-        
-        setToDatabase(user: user!, dict: dict as [String : AnyObject])
-      }
+    if fullnameTF.text?.isEmpty == false && emailTF.text?.isEmpty == false && passwordTF.text?.isEmpty == false {
+      // text fields are not empty
       
-    })
-    
-    
-    func setToDatabase(user:FIRUser, dict:[String:AnyObject]) {
-      databaseRef.child("users").child(user.uid).setValue(dict)
+      guard let imageData = UIImageJPEGRepresentation(self.profileImage.image!, 0.8) else {return} // Cant create data from iamge
       
-      var data = NSData()
-      data = UIImageJPEGRepresentation(profileImage.image!, 0.6)! as NSData
-      // set upload path
-      let filePath = "\(FIRAuth.auth()!.currentUser!.uid)/\("profileImage")"
-      let metaData = FIRStorageMetadata()
-      metaData.contentType = "image/jpg"
-      self.storageRef.child(filePath).put(data as Data, metadata: metaData){(metaData,error) in
-        if let error = error {
-          print(error.localizedDescription)
-          return
-        }else{
-          //store downloadURL
-          let downloadURL = metaData!.downloadURL()!.absoluteString
-          self.profileUrl = downloadURL
+      networkService.signUp(email, fullname: fullname, password: password, imageData: imageData, complition: { (error) in
+        // have got some error
+        if error != nil {
+          if let errCode = FIRAuthErrorCode(rawValue: (error?._code)!) {
+            switch errCode {
+            case .errorCodeEmailAlreadyInUse:
+              print("email already in use")
+              let _ : SCLAlertViewResponder = SCLAlertView().showError("email already in use", subTitle: "")
+            case .errorCodeInvalidEmail:
+              print("invalid email")
+              let _ : SCLAlertViewResponder = SCLAlertView().showError("invalid email", subTitle: "")
+            case .errorCodeWrongPassword:
+              print("wrong password")
+              let _ : SCLAlertViewResponder = SCLAlertView().showError("wrong password", subTitle: "")
+            default: break
+            }
+          }
+        } else {
+          
+            self.view.endEditing(true)
+            let alertViewResponder: SCLAlertViewResponder = SCLAlertView().showSuccess("User created", subTitle: "Now you can add comments and rate products.")
+            alertViewResponder.setDismissBlock {
+              self.dismiss(animated: true, completion: nil)
+            }
         }
-      }
+      })
+      
+    }else {
+      // text fields are empty
+      let _ : SCLAlertViewResponder = SCLAlertView().showInfo("Text fields are empty", subTitle: "")
+      
     }
     
   }
-  
-  
-  
-  
-  
-  
   
   
   @IBAction func cancelAction(_ sender: Any) {
@@ -131,9 +137,15 @@ class SignUpVC: UIViewController, UINavigationControllerDelegate, UIImagePickerC
     
   }
   
-  
-
-  
-  
-  
 }
+
+
+
+
+
+
+
+
+
+
+

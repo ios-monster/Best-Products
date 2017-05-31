@@ -40,3 +40,12 @@ extension UIViewController {
     view.endEditing(true)
   }
 }
+
+
+extension String {
+  func condenseWhitespace() -> String {
+    return self.components(separatedBy: CharacterSet.whitespacesAndNewlines)
+      .filter { !$0.isEmpty }
+      .joined(separator: " ")
+  }
+}

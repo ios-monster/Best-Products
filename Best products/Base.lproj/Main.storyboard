@@ -729,7 +729,7 @@
                                 <color key="textColor" red="0.52156862745098043" green="0.52156862745098043" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n65-6l-Aj5">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n65-6l-Aj5">
                                 <rect key="frame" x="16" y="256" width="343" height="42"/>
                                 <color key="backgroundColor" red="0.31372549019607843" green="0.69803921568627447" blue="0.5607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -770,7 +770,7 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IDB-Cw-59r" customClass="CosmosView" customModule="Cosmos">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IDB-Cw-59r" customClass="CosmosView" customModule="Cosmos">
                                 <rect key="frame" x="90" y="191" width="195" height="35"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="rating">
@@ -1451,11 +1451,10 @@
                                     <constraint firstAttribute="height" constant="42" id="mrF-fv-kfz"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
-                                <state key="normal" title="Sign up ">
+                                <state key="normal" title="Sign up  / Log in">
                                     <color key="titleColor" red="0.96972160529999996" green="0.96972160529999996" blue="0.96972160529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="signUpBtnTapped:" destination="H1C-19-P2P" eventType="touchUpInside" id="sOf-qV-39e"/>
                                     <segue destination="lGO-Ob-30Y" kind="presentation" id="EDA-VX-cKM"/>
                                 </connections>
                             </button>
