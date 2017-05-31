@@ -7,10 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		596096B018F645818EC47B11 /* Pods_Best_products.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF190574FE6F2B163841B1E2 /* Pods_Best_products.framework */; };
 		6843ECEC1ECF31BF00DA143B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6843ECEB1ECF31BF00DA143B /* AppDelegate.swift */; };
 		6843ECF11ECF31BF00DA143B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6843ECEF1ECF31BF00DA143B /* Main.storyboard */; };
 		6843ECF31ECF31BF00DA143B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6843ECF21ECF31BF00DA143B /* Assets.xcassets */; };
 		6843ECF61ECF31BF00DA143B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6843ECF41ECF31BF00DA143B /* LaunchScreen.storyboard */; };
+		687D9F0D1ED9EFAA001B1DD6 /* BillingInfoTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687D9F0C1ED9EFAA001B1DD6 /* BillingInfoTableVC.swift */; };
+		687D9F0F1ED9F0A8001B1DD6 /* BillingInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687D9F0E1ED9F0A8001B1DD6 /* BillingInfoCell.swift */; };
+		68930BD51EDC2C51005DDD50 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68930BD41EDC2C51005DDD50 /* Extensions.swift */; };
+		68930BD81EDC51B7005DDD50 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68930BD71EDC51B7005DDD50 /* ProfileVC.swift */; };
+		68930BDB1EDD8D4B005DDD50 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68930BDA1EDD8D4B005DDD50 /* SignUpVC.swift */; };
+		68930BDE1EDD8D83005DDD50 /* LogInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68930BDD1EDD8D83005DDD50 /* LogInVC.swift */; };
+		68930BE11EDD8D9E005DDD50 /* ResetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68930BE01EDD8D9E005DDD50 /* ResetPasswordVC.swift */; };
+		68930BEF1EDD8EDF005DDD50 /* AkiraTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68930BE31EDD8EDF005DDD50 /* AkiraTextField.swift */; };
+		68930BF01EDD8EDF005DDD50 /* HoshiTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68930BE41EDD8EDF005DDD50 /* HoshiTextField.swift */; };
+		68930BF11EDD8EDF005DDD50 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 68930BE51EDD8EDF005DDD50 /* Info.plist */; };
+		68930BF21EDD8EDF005DDD50 /* IsaoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68930BE61EDD8EDF005DDD50 /* IsaoTextField.swift */; };
+		68930BF31EDD8EDF005DDD50 /* JiroTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68930BE71EDD8EDF005DDD50 /* JiroTextField.swift */; };
+		68930BF41EDD8EDF005DDD50 /* KaedeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68930BE81EDD8EDF005DDD50 /* KaedeTextField.swift */; };
+		68930BF51EDD8EDF005DDD50 /* MadokaTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68930BE91EDD8EDF005DDD50 /* MadokaTextField.swift */; };
+		68930BF61EDD8EDF005DDD50 /* MinoruTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68930BEA1EDD8EDF005DDD50 /* MinoruTextField.swift */; };
+		68930BF71EDD8EDF005DDD50 /* TextFieldEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68930BEC1EDD8EDF005DDD50 /* TextFieldEffects.swift */; };
+		68930BF81EDD8EDF005DDD50 /* YokoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68930BED1EDD8EDF005DDD50 /* YokoTextField.swift */; };
+		68930BF91EDD8EDF005DDD50 /* YoshikoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68930BEE1EDD8EDF005DDD50 /* YoshikoTextField.swift */; };
+		68930BFB1EDDA94F005DDD50 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68930BFA1EDDA94F005DDD50 /* FirebaseService.swift */; };
+		68930BFD1EDDA9E6005DDD50 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 68930BFC1EDDA9E6005DDD50 /* GoogleService-Info.plist */; };
+		68D25B9E1ED5F83E006D5D31 /* TopProductsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D25B9D1ED5F83E006D5D31 /* TopProductsCell.swift */; };
+		68D25BA01ED5F9EA006D5D31 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D25B9F1ED5F9EA006D5D31 /* Product.swift */; };
+		68D25BA31ED6F6AB006D5D31 /* ProductDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D25BA21ED6F6AB006D5D31 /* ProductDetailVC.swift */; };
+		68D25BA61ED730DC006D5D31 /* CommentTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D25BA51ED730DC006D5D31 /* CommentTableVC.swift */; };
+		68D25BA81ED7310F006D5D31 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D25BA71ED7310F006D5D31 /* CommentTableViewCell.swift */; };
+		68D25BAB1ED74FA4006D5D31 /* NewCommentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D25BAA1ED74FA4006D5D31 /* NewCommentVC.swift */; };
+		68F3370F1ED5F0D900EAF173 /* ProductListTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F3370E1ED5F0D900EAF173 /* ProductListTableVC.swift */; };
+		68F337111ED5F59500EAF173 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F337101ED5F59500EAF173 /* ProductCell.swift */; };
+		68F80D761ED9A49A00F04CDC /* CheckoutTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F80D751ED9A49A00F04CDC /* CheckoutTableVC.swift */; };
+		68F80D781ED9A76F00F04CDC /* CheckoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F80D771ED9A76F00F04CDC /* CheckoutTableViewCell.swift */; };
+		68FC3FDC1ED850E800DC653E /* FavouriteTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FC3FDB1ED850E800DC653E /* FavouriteTableVC.swift */; };
+		68FC3FDE1ED8513500DC653E /* FavouriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FC3FDD1ED8513500DC653E /* FavouriteTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +53,42 @@
 		6843ECF21ECF31BF00DA143B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6843ECF51ECF31BF00DA143B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6843ECF71ECF31BF00DA143B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		687D9F0C1ED9EFAA001B1DD6 /* BillingInfoTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillingInfoTableVC.swift; sourceTree = "<group>"; };
+		687D9F0E1ED9F0A8001B1DD6 /* BillingInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillingInfoCell.swift; sourceTree = "<group>"; };
+		68930BD41EDC2C51005DDD50 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		68930BD71EDC51B7005DDD50 /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		68930BDA1EDD8D4B005DDD50 /* SignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		68930BDD1EDD8D83005DDD50 /* LogInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInVC.swift; sourceTree = "<group>"; };
+		68930BE01EDD8D9E005DDD50 /* ResetPasswordVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordVC.swift; sourceTree = "<group>"; };
+		68930BE31EDD8EDF005DDD50 /* AkiraTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AkiraTextField.swift; sourceTree = "<group>"; };
+		68930BE41EDD8EDF005DDD50 /* HoshiTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoshiTextField.swift; sourceTree = "<group>"; };
+		68930BE51EDD8EDF005DDD50 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68930BE61EDD8EDF005DDD50 /* IsaoTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IsaoTextField.swift; sourceTree = "<group>"; };
+		68930BE71EDD8EDF005DDD50 /* JiroTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JiroTextField.swift; sourceTree = "<group>"; };
+		68930BE81EDD8EDF005DDD50 /* KaedeTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KaedeTextField.swift; sourceTree = "<group>"; };
+		68930BE91EDD8EDF005DDD50 /* MadokaTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MadokaTextField.swift; sourceTree = "<group>"; };
+		68930BEA1EDD8EDF005DDD50 /* MinoruTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinoruTextField.swift; sourceTree = "<group>"; };
+		68930BEB1EDD8EDF005DDD50 /* TextFieldEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFieldEffects.h; sourceTree = "<group>"; };
+		68930BEC1EDD8EDF005DDD50 /* TextFieldEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldEffects.swift; sourceTree = "<group>"; };
+		68930BED1EDD8EDF005DDD50 /* YokoTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YokoTextField.swift; sourceTree = "<group>"; };
+		68930BEE1EDD8EDF005DDD50 /* YoshikoTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoshikoTextField.swift; sourceTree = "<group>"; };
+		68930BFA1EDDA94F005DDD50 /* FirebaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
+		68930BFC1EDDA9E6005DDD50 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		68D25B9D1ED5F83E006D5D31 /* TopProductsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopProductsCell.swift; sourceTree = "<group>"; };
+		68D25B9F1ED5F9EA006D5D31 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		68D25BA21ED6F6AB006D5D31 /* ProductDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailVC.swift; sourceTree = "<group>"; };
+		68D25BA51ED730DC006D5D31 /* CommentTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentTableVC.swift; sourceTree = "<group>"; };
+		68D25BA71ED7310F006D5D31 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
+		68D25BAA1ED74FA4006D5D31 /* NewCommentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCommentVC.swift; sourceTree = "<group>"; };
+		68F3370E1ED5F0D900EAF173 /* ProductListTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductListTableVC.swift; sourceTree = "<group>"; };
+		68F337101ED5F59500EAF173 /* ProductCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProductCell.swift; path = ../ProductCell.swift; sourceTree = "<group>"; };
+		68F80D751ED9A49A00F04CDC /* CheckoutTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CheckoutTableVC.swift; path = Assets.xcassets/CheckoutTableVC.swift; sourceTree = "<group>"; };
+		68F80D771ED9A76F00F04CDC /* CheckoutTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutTableViewCell.swift; sourceTree = "<group>"; };
+		68FC3FDB1ED850E800DC653E /* FavouriteTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavouriteTableVC.swift; sourceTree = "<group>"; };
+		68FC3FDD1ED8513500DC653E /* FavouriteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavouriteTableViewCell.swift; sourceTree = "<group>"; };
+		8742C8313DF031D1CA8E4808 /* Pods-Best products.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Best products.release.xcconfig"; path = "Pods/Target Support Files/Pods-Best products/Pods-Best products.release.xcconfig"; sourceTree = "<group>"; };
+		CE8C7C00261EE890485BB3DE /* Pods-Best products.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Best products.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Best products/Pods-Best products.debug.xcconfig"; sourceTree = "<group>"; };
+		CF190574FE6F2B163841B1E2 /* Pods_Best_products.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Best_products.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				596096B018F645818EC47B11 /* Pods_Best_products.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +108,8 @@
 			children = (
 				6843ECEA1ECF31BF00DA143B /* Best products */,
 				6843ECE91ECF31BF00DA143B /* Products */,
+				A1C038BC5CECD1F63F9A61BC /* Pods */,
+				7C0384843D86BD89106AB506 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,11 +126,166 @@
 			children = (
 				6843ECEB1ECF31BF00DA143B /* AppDelegate.swift */,
 				6843ECEF1ECF31BF00DA143B /* Main.storyboard */,
+				68930BDF1EDD8D89005DDD50 /* ResetPasswordVC */,
+				68930BDC1EDD8D6D005DDD50 /* LigInVC */,
+				68930BD91EDD8D30005DDD50 /* SignUpVC */,
+				68930BD61EDC51A2005DDD50 /* ProfileVC */,
+				687D9F0B1ED9EF8E001B1DD6 /* BillingInfoVC */,
+				68F80D741ED9A47100F04CDC /* CheckoutTableVC */,
+				68D25BA41ED730BF006D5D31 /* CommentTableVC  */,
+				68FC3FDA1ED84F4500DC653E /* FavouriteTableVC */,
+				68D25BA11ED6F68C006D5D31 /* ProductDetailVC */,
+				68F337121ED5F5B600EAF173 /* ProductList */,
+				68D25BA91ED74CFE006D5D31 /* Model */,
+				68930BD31EDC2C3D005DDD50 /* Extensions */,
 				6843ECF21ECF31BF00DA143B /* Assets.xcassets */,
 				6843ECF41ECF31BF00DA143B /* LaunchScreen.storyboard */,
+				68930BFC1EDDA9E6005DDD50 /* GoogleService-Info.plist */,
 				6843ECF71ECF31BF00DA143B /* Info.plist */,
 			);
 			path = "Best products";
+			sourceTree = "<group>";
+		};
+		687D9F0B1ED9EF8E001B1DD6 /* BillingInfoVC */ = {
+			isa = PBXGroup;
+			children = (
+				687D9F0C1ED9EFAA001B1DD6 /* BillingInfoTableVC.swift */,
+				687D9F0E1ED9F0A8001B1DD6 /* BillingInfoCell.swift */,
+			);
+			name = BillingInfoVC;
+			sourceTree = "<group>";
+		};
+		68930BD31EDC2C3D005DDD50 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				68930BD41EDC2C51005DDD50 /* Extensions.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		68930BD61EDC51A2005DDD50 /* ProfileVC */ = {
+			isa = PBXGroup;
+			children = (
+				68930BD71EDC51B7005DDD50 /* ProfileVC.swift */,
+			);
+			name = ProfileVC;
+			sourceTree = "<group>";
+		};
+		68930BD91EDD8D30005DDD50 /* SignUpVC */ = {
+			isa = PBXGroup;
+			children = (
+				68930BDA1EDD8D4B005DDD50 /* SignUpVC.swift */,
+			);
+			name = SignUpVC;
+			sourceTree = "<group>";
+		};
+		68930BDC1EDD8D6D005DDD50 /* LigInVC */ = {
+			isa = PBXGroup;
+			children = (
+				68930BDD1EDD8D83005DDD50 /* LogInVC.swift */,
+			);
+			name = LigInVC;
+			sourceTree = "<group>";
+		};
+		68930BDF1EDD8D89005DDD50 /* ResetPasswordVC */ = {
+			isa = PBXGroup;
+			children = (
+				68930BE01EDD8D9E005DDD50 /* ResetPasswordVC.swift */,
+			);
+			name = ResetPasswordVC;
+			sourceTree = "<group>";
+		};
+		68930BE21EDD8EDF005DDD50 /* TextFieldEffects */ = {
+			isa = PBXGroup;
+			children = (
+				68930BE31EDD8EDF005DDD50 /* AkiraTextField.swift */,
+				68930BE41EDD8EDF005DDD50 /* HoshiTextField.swift */,
+				68930BE51EDD8EDF005DDD50 /* Info.plist */,
+				68930BE61EDD8EDF005DDD50 /* IsaoTextField.swift */,
+				68930BE71EDD8EDF005DDD50 /* JiroTextField.swift */,
+				68930BE81EDD8EDF005DDD50 /* KaedeTextField.swift */,
+				68930BE91EDD8EDF005DDD50 /* MadokaTextField.swift */,
+				68930BEA1EDD8EDF005DDD50 /* MinoruTextField.swift */,
+				68930BEB1EDD8EDF005DDD50 /* TextFieldEffects.h */,
+				68930BEC1EDD8EDF005DDD50 /* TextFieldEffects.swift */,
+				68930BED1EDD8EDF005DDD50 /* YokoTextField.swift */,
+				68930BEE1EDD8EDF005DDD50 /* YoshikoTextField.swift */,
+			);
+			path = TextFieldEffects;
+			sourceTree = "<group>";
+		};
+		68D25BA11ED6F68C006D5D31 /* ProductDetailVC */ = {
+			isa = PBXGroup;
+			children = (
+				68D25BA21ED6F6AB006D5D31 /* ProductDetailVC.swift */,
+			);
+			name = ProductDetailVC;
+			sourceTree = "<group>";
+		};
+		68D25BA41ED730BF006D5D31 /* CommentTableVC  */ = {
+			isa = PBXGroup;
+			children = (
+				68D25BA51ED730DC006D5D31 /* CommentTableVC.swift */,
+				68D25BA71ED7310F006D5D31 /* CommentTableViewCell.swift */,
+				68D25BAA1ED74FA4006D5D31 /* NewCommentVC.swift */,
+			);
+			name = "CommentTableVC ";
+			sourceTree = "<group>";
+		};
+		68D25BA91ED74CFE006D5D31 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				68D25B9F1ED5F9EA006D5D31 /* Product.swift */,
+				68930BFA1EDDA94F005DDD50 /* FirebaseService.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		68F337121ED5F5B600EAF173 /* ProductList */ = {
+			isa = PBXGroup;
+			children = (
+				68F3370E1ED5F0D900EAF173 /* ProductListTableVC.swift */,
+				68F337101ED5F59500EAF173 /* ProductCell.swift */,
+				68D25B9D1ED5F83E006D5D31 /* TopProductsCell.swift */,
+			);
+			name = ProductList;
+			sourceTree = "<group>";
+		};
+		68F80D741ED9A47100F04CDC /* CheckoutTableVC */ = {
+			isa = PBXGroup;
+			children = (
+				68F80D751ED9A49A00F04CDC /* CheckoutTableVC.swift */,
+				68F80D771ED9A76F00F04CDC /* CheckoutTableViewCell.swift */,
+			);
+			name = CheckoutTableVC;
+			sourceTree = "<group>";
+		};
+		68FC3FDA1ED84F4500DC653E /* FavouriteTableVC */ = {
+			isa = PBXGroup;
+			children = (
+				68FC3FDB1ED850E800DC653E /* FavouriteTableVC.swift */,
+				68FC3FDD1ED8513500DC653E /* FavouriteTableViewCell.swift */,
+			);
+			name = FavouriteTableVC;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		7C0384843D86BD89106AB506 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				68930BE21EDD8EDF005DDD50 /* TextFieldEffects */,
+				CF190574FE6F2B163841B1E2 /* Pods_Best_products.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A1C038BC5CECD1F63F9A61BC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CE8C7C00261EE890485BB3DE /* Pods-Best products.debug.xcconfig */,
+				8742C8313DF031D1CA8E4808 /* Pods-Best products.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -68,9 +295,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6843ECFA1ECF31BF00DA143B /* Build configuration list for PBXNativeTarget "Best products" */;
 			buildPhases = (
+				B6F519227A88EC19EDB9EAF4 /* [CP] Check Pods Manifest.lock */,
 				6843ECE41ECF31BF00DA143B /* Sources */,
 				6843ECE51ECF31BF00DA143B /* Frameworks */,
 				6843ECE61ECF31BF00DA143B /* Resources */,
+				58868C5FA95A157A0E775669 /* [CP] Embed Pods Frameworks */,
+				5A2A2512E0BE22443D4B3F5B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -121,20 +351,100 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68930BF11EDD8EDF005DDD50 /* Info.plist in Resources */,
 				6843ECF61ECF31BF00DA143B /* LaunchScreen.storyboard in Resources */,
 				6843ECF31ECF31BF00DA143B /* Assets.xcassets in Resources */,
 				6843ECF11ECF31BF00DA143B /* Main.storyboard in Resources */,
+				68930BFD1EDDA9E6005DDD50 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		58868C5FA95A157A0E775669 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Best products/Pods-Best products-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5A2A2512E0BE22443D4B3F5B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Best products/Pods-Best products-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B6F519227A88EC19EDB9EAF4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6843ECE41ECF31BF00DA143B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68D25BA61ED730DC006D5D31 /* CommentTableVC.swift in Sources */,
+				68F337111ED5F59500EAF173 /* ProductCell.swift in Sources */,
+				68D25BA31ED6F6AB006D5D31 /* ProductDetailVC.swift in Sources */,
+				68930BDE1EDD8D83005DDD50 /* LogInVC.swift in Sources */,
+				68F80D761ED9A49A00F04CDC /* CheckoutTableVC.swift in Sources */,
+				68D25BA81ED7310F006D5D31 /* CommentTableViewCell.swift in Sources */,
+				68930BF41EDD8EDF005DDD50 /* KaedeTextField.swift in Sources */,
+				687D9F0D1ED9EFAA001B1DD6 /* BillingInfoTableVC.swift in Sources */,
+				68930BF51EDD8EDF005DDD50 /* MadokaTextField.swift in Sources */,
+				68FC3FDE1ED8513500DC653E /* FavouriteTableViewCell.swift in Sources */,
 				6843ECEC1ECF31BF00DA143B /* AppDelegate.swift in Sources */,
+				68930BEF1EDD8EDF005DDD50 /* AkiraTextField.swift in Sources */,
+				68D25BA01ED5F9EA006D5D31 /* Product.swift in Sources */,
+				68930BF31EDD8EDF005DDD50 /* JiroTextField.swift in Sources */,
+				68930BF71EDD8EDF005DDD50 /* TextFieldEffects.swift in Sources */,
+				68930BF01EDD8EDF005DDD50 /* HoshiTextField.swift in Sources */,
+				68930BFB1EDDA94F005DDD50 /* FirebaseService.swift in Sources */,
+				68930BF91EDD8EDF005DDD50 /* YoshikoTextField.swift in Sources */,
+				68D25BAB1ED74FA4006D5D31 /* NewCommentVC.swift in Sources */,
+				68930BE11EDD8D9E005DDD50 /* ResetPasswordVC.swift in Sources */,
+				68930BDB1EDD8D4B005DDD50 /* SignUpVC.swift in Sources */,
+				68930BF81EDD8EDF005DDD50 /* YokoTextField.swift in Sources */,
+				68F3370F1ED5F0D900EAF173 /* ProductListTableVC.swift in Sources */,
+				68930BD51EDC2C51005DDD50 /* Extensions.swift in Sources */,
+				68930BF61EDD8EDF005DDD50 /* MinoruTextField.swift in Sources */,
+				68F80D781ED9A76F00F04CDC /* CheckoutTableViewCell.swift in Sources */,
+				68930BD81EDC51B7005DDD50 /* ProfileVC.swift in Sources */,
+				68930BF21EDD8EDF005DDD50 /* IsaoTextField.swift in Sources */,
+				687D9F0F1ED9F0A8001B1DD6 /* BillingInfoCell.swift in Sources */,
+				68D25B9E1ED5F83E006D5D31 /* TopProductsCell.swift in Sources */,
+				68FC3FDC1ED850E800DC653E /* FavouriteTableVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +565,7 @@
 		};
 		6843ECFB1ECF31BF00DA143B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE8C7C00261EE890485BB3DE /* Pods-Best products.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = N3HP37JDDK;
@@ -268,6 +579,7 @@
 		};
 		6843ECFC1ECF31BF00DA143B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8742C8313DF031D1CA8E4808 /* Pods-Best products.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = N3HP37JDDK;
