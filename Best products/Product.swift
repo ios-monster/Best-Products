@@ -124,7 +124,9 @@ class Comment {
 
 
 
-
+func new() {
+  
+}
 
 
 
