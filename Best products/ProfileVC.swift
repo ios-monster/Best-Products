@@ -30,9 +30,21 @@ class ProfileVC: UIViewController {
   @IBOutlet var signUpBtn: UIButton!
   
   
+  var bProducts:[BProduct] = []
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    setTodatabase()
+    
+//    networkService.databaseRef.child("Products").observeSingleEvent(of: .value, with: { (snapshot) in
+//      for product in snapshot.children {
+//      let product = BProduct(snapshot: product as! FIRDataSnapshot)
+//        self.bProducts.append(product)
+//        print(product.ref ?? "")
+//      }
+//    })
+    
     
     profileImage.layer.cornerRadius = profileImage.frame.height / 2
     profileImage.layer.masksToBounds = true
@@ -43,9 +55,14 @@ class ProfileVC: UIViewController {
     navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
   }
   
+  func uploadProducts()  {
+    
+  }
+  
   
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
+    
     
     
     FIRAuth.auth()?.addStateDidChangeListener({ (auth, user) in
@@ -100,7 +117,6 @@ class ProfileVC: UIViewController {
       self.nameText.isHidden = true
       self.favouritesAndCommentsStack.isHidden = true
       self.emailAndFullnameStack.isHidden = true
-      self.profileImage.image = UIImage(named: "pfofileImage1")
       self.signUpBtn.isHidden = false
       self.navigationItem.leftBarButtonItem = nil
       
@@ -115,6 +131,38 @@ class ProfileVC: UIViewController {
   }
   
 }
+
+  public func setTodatabase() {
+    
+    let networkingService = NetworkingService()
+    
+//    let iphone6s = BProduct(title: "Iphone 6s 4.7-inch Space grey", descrpiption: "32GB Retina HD display with 3D Touch 12-megapixel camera Assisted GPS and GLONASS Digital compass Wi-Fi Cellular", mainImageUrl: "gs://best-products.appspot.com/ProductsImages/iphone 6s space grey/iphone 6s space grey.png", otherImagesUrls: ["gs://best-products.appspot.com/ProductsImages/iphone 6s space grey/Image 2.png", "gs://best-products.appspot.com/ProductsImages/iphone 6s space grey/Image 3.png"], price: 645.0, previousPrice: 900.0, averageRating: 4.9, estimatedShipping: 10.0, tax: 0.0, newproduct: false, hotProduct: true, productOnSale: true)
+//
+    
+//    let firstComment = BComment(text: "Very big price(", toProduct: "iphone6sSpaceGrey", addedByUser: "tom22f", dateAdded: Date(), rating: 3.0)
+//    
+//        networkingService.databaseRef.child("Products").child("iphone6sSpaceGrey").child("comments").childByAutoId().setValue(firstComment.toAnyObject())
+
+  }
+  
+
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

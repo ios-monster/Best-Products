@@ -122,10 +122,36 @@ class Comment {
     self.dateAdded = dateAdded
     self.rating = rating
   }
-  
-  
 }
 
+struct BComment {
+  var key:String?
+  var ref: FIRDatabaseReference?
+  var text:String?
+  var toProduct:String?
+  var addedByUser:String?
+  var dateAdded: Date?
+  var rating:Double?
+  
+  init(text:String,toProduct:String,addedByUser: String,dateAdded:Date, rating:Double ) {
+    self.text = text
+    self.toProduct = toProduct
+    self.addedByUser = addedByUser
+    self.dateAdded = dateAdded
+    self.rating = rating
+  }
+  
+  func toAnyObject() -> [String:Any] {
+    
+    
+    let formatter = DateFormatter()
+    formatter.dateFormat = "dd-MM-YY"
+    
+    let stringFromDate = formatter.string(from: dateAdded!)
+    return ["text":text!, "toProduct":toProduct!,"addedByUser":addedByUser!, "dateAdded":stringFromDate, "rating":rating!]
+  }
+  
+}
 
 struct BUser {
   
@@ -147,6 +173,7 @@ struct BUser {
 //    self.profileImageUrl = profileImageUrl
 //  }
 //  
+  
   init(snapshot:FIRDataSnapshot) {
     let dict = snapshot.value as? NSDictionary
     
@@ -156,19 +183,71 @@ struct BUser {
     self.email = dict?["email"] as? String
     self.profileImageUrl = dict?["profileImageUrl"] as? String
 }
-
   
 }
 
+  struct BProduct {
+    
+    var ref: FIRDatabaseReference?
+    var key:String?
+    var title:String?
+    var description: String?
+    var mainImageUrl: String?
+    var otherImagesUrls:[String]
+    var price:Double?
+    var previousPrice:Double?
+    var averageRating:Double?
+    var estimatedShipping:Double?
+    var tax:Double?
+    var newProduct:Bool?
+    var hotProduct:Bool?
+    var productOnSale:Bool?
+    var comments: [BComment]?
+    
+    init(snapshot: FIRDataSnapshot) {
+      
+      let dict = snapshot.value as? NSDictionary
+      self.title = dict?["title"] as? String
+      self.description = dict?["description"] as? String
+      self.hotProduct = dict?["hotProduct"] as? Bool
+      self.otherImagesUrls = dict?["imageurls"] as! [String]
+      self.ref = snapshot.ref
+    }
+    
+    init(title:String, descrpiption:String, mainImageUrl:String, otherImagesUrls:[String], price:Double, previousPrice:Double, averageRating:Double, estimatedShipping:Double, tax: Double, newproduct :Bool, hotProduct: Bool, productOnSale: Bool) {
+      
+      self.title  = title
+      self.description = descrpiption
+      self.mainImageUrl = mainImageUrl
+      self.otherImagesUrls = otherImagesUrls
+      self.price = price
+      self.previousPrice = previousPrice
+      self.averageRating = averageRating
+      self.estimatedShipping = estimatedShipping
+      self.tax = tax
+      self.newProduct = newproduct
+      self.hotProduct = hotProduct
+      self.productOnSale = productOnSale
+      
+    }
+    
+    
+    func toAnyObject () -> [String: Any] {
+      
 
+      
+      return ["title" : title!,"description" : description!,"mainImageUrl" : mainImageUrl! ,"OtherImagesUrls" : otherImagesUrls, "price" : price!, "previousPrice":previousPrice!, "averageRating" : averageRating! , "estimatedShipping":estimatedShipping!, "tax": tax!, "newproduct" : newProduct!, "hotProduct": hotProduct!, "productOnSale":productOnSale!]
+    }
+    
+}
 
-
-
-
-
-
-
-
+//
+//func uploadProducts() -> [String: AnyObject] {
+//  
+//  
+//  return []
+//  
+//}
 
 
 

@@ -1565,7 +1565,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HxJ-qF-AfA" customClass="HoshiTextField" customModule="Best_products" customModuleProvider="target">
-                                <rect key="frame" x="16" y="264" width="343" height="50"/>
+                                <rect key="frame" x="16" y="279" width="343" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="rf7-ua-moj"/>
                                 </constraints>
@@ -1585,7 +1585,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hrp-HS-gnG" customClass="HoshiTextField" customModule="Best_products" customModuleProvider="target">
-                                <rect key="frame" x="16" y="334" width="343" height="50"/>
+                                <rect key="frame" x="16" y="349" width="343" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Zy8-la-vw8"/>
                                 </constraints>
@@ -1597,7 +1597,7 @@
                                         <color key="value" red="0.81144781489999995" green="0.81948195160000004" blue="0.81948195160000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                        <color key="value" red="0.57648393460000003" green="0.58219169630000001" blue="0.58219169630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="0.57647058823529407" green="0.58039215686274503" blue="0.58039215686274503" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
                                         <color key="value" red="0.90196078431372551" green="0.91764705882352937" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1605,7 +1605,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Fullname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ARo-99-Knc" customClass="HoshiTextField" customModule="Best_products" customModuleProvider="target">
-                                <rect key="frame" x="16" y="194" width="343" height="50"/>
+                                <rect key="frame" x="16" y="209" width="343" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="151-Zk-lUj"/>
                                 </constraints>
@@ -1632,7 +1632,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x8R-Af-i2v">
-                                <rect key="frame" x="16" y="424" width="343" height="42"/>
+                                <rect key="frame" x="16" y="439" width="343" height="42"/>
                                 <color key="backgroundColor" red="0.44705882349999998" green="0.73725490199999999" blue="0.76470588240000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="NGc-dy-XfO"/>
@@ -1646,7 +1646,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="jmL-e8-KYo">
-                                <rect key="frame" x="83.5" y="481" width="209.5" height="29"/>
+                                <rect key="frame" x="83.5" y="496" width="209.5" height="29"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQy-tW-GNg">
                                         <rect key="frame" x="0.0" y="0.0" width="162.5" height="29"/>
@@ -1666,6 +1666,12 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add your profile image" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bcS-lv-dhs">
+                                <rect key="frame" x="135" y="189" width="105" height="12"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="10"/>
+                                <color key="textColor" red="0.57647058823529407" green="0.58039215686274503" blue="0.58039215686274503" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1673,13 +1679,15 @@
                             <constraint firstAttribute="trailing" secondItem="HxJ-qF-AfA" secondAttribute="trailing" constant="16" id="ARE-AD-Msv"/>
                             <constraint firstItem="TPA-2l-GgU" firstAttribute="centerX" secondItem="nMu-N9-c1T" secondAttribute="centerX" id="F0q-Df-fpp"/>
                             <constraint firstItem="Hrp-HS-gnG" firstAttribute="leading" secondItem="nMu-N9-c1T" secondAttribute="leading" constant="16" id="FLS-vb-oSo"/>
-                            <constraint firstItem="ARo-99-Knc" firstAttribute="top" secondItem="TPA-2l-GgU" secondAttribute="bottom" constant="20" id="LmI-2m-Bm2"/>
+                            <constraint firstItem="ARo-99-Knc" firstAttribute="top" secondItem="TPA-2l-GgU" secondAttribute="bottom" constant="35" id="LmI-2m-Bm2"/>
                             <constraint firstItem="ARo-99-Knc" firstAttribute="leading" secondItem="nMu-N9-c1T" secondAttribute="leading" constant="16" id="MXA-co-o3D"/>
+                            <constraint firstItem="bcS-lv-dhs" firstAttribute="centerX" secondItem="nMu-N9-c1T" secondAttribute="centerX" id="Q3V-sV-43N"/>
                             <constraint firstItem="HxJ-qF-AfA" firstAttribute="leading" secondItem="nMu-N9-c1T" secondAttribute="leading" constant="16" id="SdH-4u-sUk"/>
                             <constraint firstItem="x8R-Af-i2v" firstAttribute="top" secondItem="Hrp-HS-gnG" secondAttribute="bottom" constant="40" id="UF5-Hz-kwy"/>
                             <constraint firstAttribute="trailing" secondItem="x8R-Af-i2v" secondAttribute="trailing" constant="16" id="WuE-WK-Sem"/>
                             <constraint firstItem="jmL-e8-KYo" firstAttribute="centerX" secondItem="nMu-N9-c1T" secondAttribute="centerX" id="c90-IS-cdR"/>
                             <constraint firstItem="x8R-Af-i2v" firstAttribute="leading" secondItem="nMu-N9-c1T" secondAttribute="leading" constant="16" id="dIO-RH-Tvw"/>
+                            <constraint firstItem="bcS-lv-dhs" firstAttribute="top" secondItem="TPA-2l-GgU" secondAttribute="bottom" constant="15" id="dtN-CN-Kt5"/>
                             <constraint firstItem="HxJ-qF-AfA" firstAttribute="top" secondItem="ARo-99-Knc" secondAttribute="bottom" constant="20" id="iiA-bJ-Ghs"/>
                             <constraint firstItem="TPA-2l-GgU" firstAttribute="top" secondItem="QPU-dg-bec" secondAttribute="bottom" constant="30" id="miD-UB-w6K"/>
                             <constraint firstAttribute="trailing" secondItem="ARo-99-Knc" secondAttribute="trailing" constant="16" id="pEI-i9-Glb"/>
