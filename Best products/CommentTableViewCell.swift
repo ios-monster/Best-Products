@@ -24,7 +24,7 @@ class CommentTableViewCell: UITableViewCell {
   
   func updateUI() {
     
-    self.username.text = comment?.addedByUser?.fullname
+    self.username.text = comment?.addedByUser
     
     if let rating = comment?.rating {
       self.rating.text = String(rating)
@@ -34,11 +34,10 @@ class CommentTableViewCell: UITableViewCell {
     self.commentText.text = comment?.text
     
     let formatter = DateFormatter()
-    formatter.dateFormat = "yyyy-MM-dd"
+    formatter.dateFormat = "dd-MM-yy"
     let dateString = formatter.string(from: (comment?.dateAdded)!)
     self.dateAdded.text = dateString
     
   }
-  
 
 }

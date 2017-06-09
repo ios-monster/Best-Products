@@ -15,7 +15,7 @@ import FirebaseDatabase
 import UIKit
 
 
-struct NetworkingService {
+struct NetworkService {
   
   var databaseRef: FIRDatabaseReference! {
     return FIRDatabase.database().reference()
@@ -26,39 +26,22 @@ struct NetworkingService {
   }
   
   
-  // 4  Signing in the User
-  func signIn(_ email: String, password: String, complition: @escaping (_ error: Error?) -> Void){
+  // 1  We create the User
+  
+  func signUp(_ email: String, fullname: String, password: String,imageData: Data!,complition: @escaping (_ error: Error?) -> Void) {
     
-    FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: { (user, error) in
+    FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
+      
       if error == nil {
         
-        if let user = user {
-          
-          print("\(user.displayName!) has signed in succesfully!")
-        }
-      }else {
+        self.setUserInfo(user, fullname: fullname, password: password, imageData: imageData)
         
+      }else {
         print(error!.localizedDescription)
         
       }
       complition(error)
     })
-  }
-  
-  // 3  Saving the user Info in the database
-  fileprivate func saveInfo(_ user: FIRUser!, fullname: String, password: String){
-    
-    // Create our user dictionary info\
-    
-    let userInfo = ["email": user.email!, "fullname": fullname,"profileImageUrl": String(describing: user.photoURL!)]
-    
-    // create user reference
-    
-    let userRef = databaseRef.child("users").child(user.uid)
-    
-    // Save the user info in the Database
-    
-    userRef.setValue(userInfo)
     
   }
   
@@ -104,6 +87,45 @@ struct NetworkingService {
       }
     }
   }
+  
+  
+  // 3  Saving the user Info in the database
+  fileprivate func saveInfo(_ user: FIRUser!, fullname: String, password: String){
+    
+    // Create our user dictionary info\
+    
+    let userInfo = ["email": user.email!, "fullname": fullname,"profileImageUrl": String(describing: user.photoURL!)]
+    
+    // create user reference
+    
+    let userRef = databaseRef.child("Users").child(user.uid)
+    
+    // Save the user info in the Database
+    
+    userRef.setValue(userInfo)
+    
+  }
+  
+  // 4  Signing in the User
+  func signIn(_ email: String, password: String, complition: @escaping (_ error: Error?) -> Void){
+    
+    FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: { (user, error) in
+      if error == nil {
+        
+        if let user = user {
+          
+          print("\(user.displayName!) has signed in succesfully!")
+        }
+      }else {
+        
+        print(error!.localizedDescription)
+        
+      }
+      complition(error)
+    })
+  }
+  
+
   // Reset Password
   func resetPassword(_ email: String,complition: @escaping (_ error: Error?) -> Void){
     FIRAuth.auth()?.sendPasswordReset(withEmail: email, completion: { (error) in
@@ -117,26 +139,7 @@ struct NetworkingService {
     })
     
   }
-  
-  
-  // 1  We create the User
-  
-  func signUp(_ email: String, fullname: String, password: String,imageData: Data!,complition: @escaping (_ error: Error?) -> Void) {
-    
-    FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
-      
-      if error == nil {
-        
-        self.setUserInfo(user, fullname: fullname, password: password, imageData: imageData)
-        
-      }else {
-        print(error!.localizedDescription)
-        
-      }
-      complition(error)
-    })
-    
-  }
+
 }
 
 

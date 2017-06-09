@@ -7,28 +7,34 @@
 //
 
 import UIKit
-
+import FirebaseAuth
+import FirebaseDatabase
+import FirebaseStorage
 
 class ProductListTableVC: UITableViewController {
   
+  let networkService = NetworkService()
+  let currentUser = FIRAuth.auth()?.currentUser?.uid
+  
   var products: [Product] = []
-  var favoutitesProducts: [Product] = []
-  
-  
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    // Download products from database
+    downloadProducts()
     
-
-    
-    products = Product.createProducts()
-    
+    // Navigation appearence
     navigationController?.navigationBar.barTintColor = UIColor(red: 120/255, green: 122/255, blue: 195/255, alpha: 1)
     navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
-    
   }
   
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    
+    updateUI()
+    
+  }
   // MARK: - Table view data source
   
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -36,36 +42,18 @@ class ProductListTableVC: UITableViewController {
     return products.count
   }
   
-  
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    
-    
-//    if indexPath.row == 0 {
-//      let topCell = tableView.dequeueReusableCell(withIdentifier: "topProductsCell", for: indexPath) as! TopProductsCell
-//      topCell.favouritesProducts = favoutitesProducts
-//      return topCell
-//    }else if indexPath.row % 9 == 0 {
-//      let topCell = tableView.dequeueReusableCell(withIdentifier: "topProductsCell", for: indexPath) as! TopProductsCell
-//      topCell.favouritesProducts = favoutitesProducts
-//      return topCell
-//    }
     
     let product = products[indexPath.row]
     let productCell = tableView.dequeueReusableCell(withIdentifier: "productCell", for: indexPath) as! ProductCell
     productCell.product = product
     
-    return productCell
     
-  
+    return productCell
   }
   
   override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     
-//    if indexPath.row == 0 {
-//      return 130.0
-//    }else if indexPath.row % 9 == 0 {
-//      return 130.0
-//    }
     return 170.0
   }
   
@@ -82,14 +70,45 @@ class ProductListTableVC: UITableViewController {
         let selectedRow = indexPath.row
         let productDetailVC = segue.destination as! ProductDetailVC
         productDetailVC.product = self.products[selectedRow]
+        
       }
     }
   }
   
-
+  
+  private func downloadProducts() {
+    self.networkService.databaseRef.child("Products").observeSingleEvent(of: .value, with: { (snapshot) in
+      var allProducts = [Product]()
+      for product in snapshot.children {
+        let product = Product(snapshot: product as! FIRDataSnapshot)
+        allProducts.append(product)
+      }
+      self.products = allProducts
+      let tabbar = self.tabBarController as! CustomTabBarController
+      tabbar.products = self.products
+      
+      DispatchQueue.main.async {
+        self.tableView.reloadData()
+      }
+    })
+  }
+  
+  
+  private func updateUI() {
+    
+    FIRAuth.auth()?.addStateDidChangeListener({ (auth, user) in
+      if user != nil {
+        DispatchQueue.main.async {
+          self.tableView.reloadData()
+        }
+      }else {
+        DispatchQueue.main.async {
+          self.tableView.reloadData()
+        }
+      }
+    })
+  }
 }
-
-
 
 
 

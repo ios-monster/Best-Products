@@ -13,4 +13,5 @@ pod 'Firebase/Database'
 pod 'Firebase/Auth'
 pod 'Firebase/Storage'
 pod 'Kingfisher'
+pod 'NotificationBannerSwift'
 end

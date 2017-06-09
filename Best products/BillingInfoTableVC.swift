@@ -11,6 +11,11 @@ import UIKit
 
 class BillingInfoTableVC: UITableViewController, UITextFieldDelegate {
   
+  var subTotal:Double = 0
+  var shipping:Double = 0
+  var tax:Double = 0
+  var total:Double = 0
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -37,6 +42,10 @@ class BillingInfoTableVC: UITableViewController, UITextFieldDelegate {
       return billingTFCell
     } else if indexPath.row == 2 {
       let billingTotalCell = tableView.dequeueReusableCell(withIdentifier: "billingTotalCell", for: indexPath) as! BillingTotalCell
+      billingTotalCell.subtotal.text = String("$ \(subTotal)")
+      billingTotalCell.shipping.text = String("$ \(shipping)")
+      billingTotalCell.tax.text = String("$ \(tax)")
+      billingTotalCell.total.text = String("$ \(total)")
       billingTotalCell.delegate = self
       return billingTotalCell
     }
@@ -64,7 +73,6 @@ class BillingInfoTableVC: UITableViewController, UITextFieldDelegate {
 }
 
 extension BillingInfoTableVC: SubmitOrderDidTappedDelegate {
-  
   func gotoMyProfileVC() {
     DispatchQueue.main.async {
     self.navigationController?.popToRootViewController(animated: false)
@@ -72,25 +80,6 @@ extension BillingInfoTableVC: SubmitOrderDidTappedDelegate {
     self.tabBarController?.selectedIndex = 0
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

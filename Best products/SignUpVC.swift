@@ -15,7 +15,7 @@ import SCLAlertView
 
 class SignUpVC: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
   
-  let networkService = NetworkingService()
+  let networkService = NetworkService()
   
   @IBOutlet var profileImage: UIImageView!
   @IBOutlet var fullnameTF: HoshiTextField!
@@ -26,12 +26,6 @@ class SignUpVC: UIViewController, UINavigationControllerDelegate, UIImagePickerC
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-    
-    
-    
-    
-    
     
     
     imagePicker.delegate = self
@@ -109,23 +103,25 @@ class SignUpVC: UIViewController, UINavigationControllerDelegate, UIImagePickerC
             switch errCode {
             case .errorCodeEmailAlreadyInUse:
               print("email already in use")
-              let _ : SCLAlertViewResponder = SCLAlertView().showError("email already in use", subTitle: "")
+              let _ : SCLAlertViewResponder = SCLAlertView().showError("Email already in use", subTitle: "")
             case .errorCodeInvalidEmail:
               print("invalid email")
-              let _ : SCLAlertViewResponder = SCLAlertView().showError("invalid email", subTitle: "")
+              let _ : SCLAlertViewResponder = SCLAlertView().showError("Invalid email", subTitle: "")
             case .errorCodeWrongPassword:
               print("wrong password")
-              let _ : SCLAlertViewResponder = SCLAlertView().showError("wrong password", subTitle: "")
+              let _ : SCLAlertViewResponder = SCLAlertView().showError("Wrong password", subTitle: "")
+            case .errorCodeWeakPassword:
+              let _ : SCLAlertViewResponder = SCLAlertView().showError("Error", subTitle: "The password must be 6 characters long or more")
             default: break
             }
           }
         } else {
           
-            self.view.endEditing(true)
-            let alertViewResponder: SCLAlertViewResponder = SCLAlertView().showSuccess("User created", subTitle: "Now you can add comments and rate products.")
-            alertViewResponder.setDismissBlock {
-              self.dismiss(animated: true, completion: nil)
-            }
+          self.view.endEditing(true)
+          let alertViewResponder: SCLAlertViewResponder = SCLAlertView().showSuccess("User created", subTitle: "Now you can add comments and rate products.")
+          alertViewResponder.setDismissBlock {
+            self.dismiss(animated: true, completion: nil)
+          }
         }
       })
       

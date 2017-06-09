@@ -7,18 +7,25 @@
 //
 
 import UIKit
+import FirebaseDatabase
+import FirebaseAuth
 
 
-protocol DeleteProductCellDelegate{
-  
-  func deleteThisCell(cell: UITableViewCell)
+protocol DeleteProductFromBasket{
+  func deleteProduct(cell:UITableViewCell)
 }
 
 
 class CheckoutProductCell: UITableViewCell {
   
+  var currentUser:String {
+    get{
+      return (FIRAuth.auth()?.currentUser?.uid)!
+    }
+  }
+  let networkService = NetworkService()
   
-  var delegate:DeleteProductCellDelegate?
+  var delegate:DeleteProductFromBasket?
   
   var product:Product? {
     didSet{
@@ -35,17 +42,25 @@ class CheckoutProductCell: UITableViewCell {
   
   @IBAction func deleteProductTapped(_ sender: Any) {
     
-    delegate?.deleteThisCell(cell: self as UITableViewCell)
+    self.product?.onBasket = false
+    delegate?.deleteProduct(cell: self)
+    self.networkService.databaseRef.child("Users").child("\(String(describing: currentUser))").child("productsOnBasket").child((self.product?.key)!).removeValue(completionBlock: { (error, ref) in
+      if error == nil {
+        print("removed product from user database")
+      }
+    })
+    
     
   }
   
-  
-  
   private func updateUI() {
    
-    if let mainImage = product?.productMainImage {
-      self.productImage.image = mainImage
+    if let mainImageUrl = product?.mainImageUrl {
+      let url = URL(string: mainImageUrl)!
+      productImage.kf.indicatorType = .activity
+      productImage.kf.setImage(with: url)
     }
+
     
     if let price = product?.price {
       self.productPrice.text = String(describing: "$ \(price)")
@@ -54,7 +69,6 @@ class CheckoutProductCell: UITableViewCell {
     self.productTitle.text = product?.title
 
   }
-
 }
 
 

@@ -15,7 +15,7 @@ import FirebaseStorage
 
 class LogInVC: UIViewController {
   
-  let networkService = NetworkingService()
+  let networkService = NetworkService()
   
   @IBOutlet var emailTF: HoshiTextField!
   

@@ -43,7 +43,12 @@ PODS:
     - ImageSlideshow/Core (= 1.2.0)
   - ImageSlideshow/Core (1.2.0)
   - Kingfisher (3.6.1)
+  - MarqueeLabel/Swift (3.0.1)
+  - NotificationBannerSwift (1.0.1):
+    - MarqueeLabel/Swift
+    - SnapKit (~> 3.2.0)
   - SCLAlertView (0.7.0)
+  - SnapKit (3.2.0)
 
 DEPENDENCIES:
   - Cosmos
@@ -53,6 +58,7 @@ DEPENDENCIES:
   - Firebase/Storage
   - ImageSlideshow
   - Kingfisher
+  - NotificationBannerSwift
   - SCLAlertView
 
 SPEC CHECKSUMS:
@@ -68,8 +74,11 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 5c046c76a1f859bc9c187e918f18e4fc7bb57b5e
   ImageSlideshow: c1395dcf33f7dba407fd21df0e8c315e8941e209
   Kingfisher: 2f31cb75f3e98d3d4c406cbdcd9b263e956cfa67
+  MarqueeLabel: 80ba85d2b76a9f5fa6c13de337db80bcd94feb1d
+  NotificationBannerSwift: f446dad0b4d070d935268a519c8ff5f3029abb0f
   SCLAlertView: 8a14ffc40590c619e183eed2298b854385f30be1
+  SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
 
-PODFILE CHECKSUM: 685844dee0da6dba7ac541d1d79f86519e2096f3
+PODFILE CHECKSUM: 11bc9674f17a5c55ce7ed01bcb18db942aedc5c3
 
 COCOAPODS: 1.2.0

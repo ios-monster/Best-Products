@@ -8,8 +8,13 @@
     {
       "size" : "20x20",
       "idiom" : "iphone",
-      "filename" : "iphone-notification-20pt@3x.png",
+      "filename" : "Icon-App-20x20@3x.png",
       "scale" : "3x"
+    },
+    {
+      "idiom" : "iphone",
+      "size" : "29x29",
+      "scale" : "1x"
     },
     {
       "idiom" : "iphone",
@@ -19,7 +24,7 @@
     {
       "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "iphone-spotlight-settings-29pt@3x.png",
+      "filename" : "Icon-App-29x29@3x.png",
       "scale" : "3x"
     },
     {
@@ -30,49 +35,61 @@
     {
       "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "iphone-spotlight-40pt@3x.png",
+      "filename" : "Icon-App-40x40@3x.png",
       "scale" : "3x"
     },
     {
-      "size" : "60x60",
+      "size" : "57x57",
       "idiom" : "iphone",
-      "filename" : "iphone-app-60pt@2x.png",
+      "filename" : "Icon-App-57x57@1x.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "57x57",
+      "idiom" : "iphone",
+      "filename" : "Icon-App-57x57@2x.png",
       "scale" : "2x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "iphone-app-60pt@3x.png",
+      "filename" : "Icon-App-60x60@2x.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "60x60",
+      "idiom" : "iphone",
+      "filename" : "Icon-App-60x60@3x.png",
       "scale" : "3x"
     },
     {
       "size" : "20x20",
       "idiom" : "ipad",
-      "filename" : "ipad-notifications-20pt@1x.png",
+      "filename" : "Icon-App-20x20@1x.png",
       "scale" : "1x"
     },
     {
       "size" : "20x20",
       "idiom" : "ipad",
-      "filename" : "ipad-notifications-20pt@2x.png",
+      "filename" : "Icon-App-20x20@2x.png",
       "scale" : "2x"
     },
     {
       "size" : "29x29",
       "idiom" : "ipad",
-      "filename" : "ipad-settings-29pt@1x.png",
+      "filename" : "Icon-App-29x29@1x.png",
       "scale" : "1x"
     },
     {
       "size" : "29x29",
       "idiom" : "ipad",
-      "filename" : "ipad-settings-29pt@2x.png",
+      "filename" : "Icon-App-29x29@2x.png",
       "scale" : "2x"
     },
     {
       "size" : "40x40",
       "idiom" : "ipad",
-      "filename" : "ipad-spotlight-40pt@1x.png",
+      "filename" : "Icon-App-40x40@1x.png",
       "scale" : "1x"
     },
     {
@@ -81,21 +98,45 @@
       "scale" : "2x"
     },
     {
+      "size" : "50x50",
+      "idiom" : "ipad",
+      "filename" : "Icon-Small-50x50@1x.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "50x50",
+      "idiom" : "ipad",
+      "filename" : "Icon-Small-50x50@2x.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "72x72",
+      "idiom" : "ipad",
+      "filename" : "Icon-App-72x72@1x.png",
+      "scale" : "1x"
+    },
+    {
+      "size" : "72x72",
+      "idiom" : "ipad",
+      "filename" : "Icon-App-72x72@2x.png",
+      "scale" : "2x"
+    },
+    {
       "size" : "76x76",
       "idiom" : "ipad",
-      "filename" : "ipad-app-76pt@1x.png",
+      "filename" : "Icon-App-76x76@1x.png",
       "scale" : "1x"
     },
     {
       "size" : "76x76",
       "idiom" : "ipad",
-      "filename" : "ipad-app-76pt@2x.png",
+      "filename" : "Icon-App-76x76@2x.png",
       "scale" : "2x"
     },
     {
       "size" : "83.5x83.5",
       "idiom" : "ipad",
-      "filename" : "ipad-pro-app-83.5pt@2x.png",
+      "filename" : "Icon-App-83.5x83.5@2x.png",
       "scale" : "2x"
     },
     {
@@ -127,7 +168,7 @@
     {
       "size" : "40x40",
       "idiom" : "watch",
-      "filename" : "ipad-spotlight-40pt@2x.png",
+      "filename" : "Icon-App-40x40@2x.png",
       "scale" : "2x",
       "role" : "appLauncher",
       "subtype" : "38mm"
@@ -147,27 +188,12 @@
       "subtype" : "42mm"
     },
     {
-      "size" : "20x20",
-      "idiom" : "ipad",
-      "filename" : "iphone-notification-20pt@2x.png",
-      "unassigned" : true,
-      "scale" : "2x"
+      "filename" : "Icon-App-60x60@1x.png",
+      "unassigned" : true
     },
     {
-      "size" : "29x29",
-      "idiom" : "ipad",
-      "filename" : "iphone-spotlight-settings-29pt@2x.png",
-      "unassigned" : true,
-      "scale" : "2x"
-    },
-    {
-      "role" : "appLauncher",
-      "size" : "40x40",
-      "idiom" : "watch",
-      "filename" : "iphone-spotlight-40pt@2x.png",
-      "subtype" : "38mm",
-      "unassigned" : true,
-      "scale" : "2x"
+      "filename" : "Icon-App-76x76@3x.png",
+      "unassigned" : true
     }
   ],
   "info" : {
