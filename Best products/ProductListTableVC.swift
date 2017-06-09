@@ -11,16 +11,23 @@ import FirebaseAuth
 import FirebaseDatabase
 import FirebaseStorage
 
-class ProductListTableVC: UITableViewController {
+class ProductListTableVC: UITableViewController,BWWalkthroughViewControllerDelegate {
   
   let networkService = NetworkService()
   let currentUser = FIRAuth.auth()?.currentUser?.uid
-  
+    
   var products: [Product] = []
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    let userDefaults = UserDefaults.standard
+    
+    if !userDefaults.bool(forKey: "walkthroughPresented") {
+      showWalkthrough()
+      userDefaults.set(true, forKey: "walkthroughPresented")
+      userDefaults.synchronize()
+    }
     // Download products from database
     downloadProducts()
     
@@ -29,6 +36,7 @@ class ProductListTableVC: UITableViewController {
     navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
   }
   
+
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
     
@@ -76,7 +84,7 @@ class ProductListTableVC: UITableViewController {
   }
   
   
-  private func downloadProducts() {
+  fileprivate func downloadProducts() {
     self.networkService.databaseRef.child("Products").observeSingleEvent(of: .value, with: { (snapshot) in
       var allProducts = [Product]()
       for product in snapshot.children {
@@ -91,22 +99,45 @@ class ProductListTableVC: UITableViewController {
         self.tableView.reloadData()
       }
     })
+    
   }
   
+ fileprivate func showWalkthrough() {
+    
+    // Get view controllers and build the walkthrough
+    let stb = UIStoryboard(name: "Walkthrough", bundle: nil)
+    let walkthrough = stb.instantiateViewController(withIdentifier: "container") as! BWWalkthroughViewController
+    let page_one = stb.instantiateViewController(withIdentifier: "page_1")
+    let page_two = stb.instantiateViewController(withIdentifier: "page_2")
+    let page_three = stb.instantiateViewController(withIdentifier: "page_3")
+    
+    // Attach the pages to the master
+    walkthrough.delegate = self
+    
+    walkthrough.add(viewController:page_one)
+    walkthrough.add(viewController:page_two)
+    walkthrough.add(viewController:page_three)
+    
+    self.present(walkthrough, animated: true, completion: nil)
+    
+  }
+  func walkthroughCloseButtonPressed() {
+    self.dismiss(animated: true, completion: nil)
+  }
   
   private func updateUI() {
-    
-    FIRAuth.auth()?.addStateDidChangeListener({ (auth, user) in
-      if user != nil {
-        DispatchQueue.main.async {
-          self.tableView.reloadData()
-        }
-      }else {
-        DispatchQueue.main.async {
-          self.tableView.reloadData()
-        }
-      }
-    })
+    self.tableView.reloadData()
+//    FIRAuth.auth()?.addStateDidChangeListener({ (auth, user) in
+//      if user != nil {
+//        DispatchQueue.main.async {
+//          self.tableView.reloadData()
+//        }
+//      }else {
+//        DispatchQueue.main.async {
+//          self.tableView.reloadData()
+//        }
+//      }
+//    })
   }
 }
 

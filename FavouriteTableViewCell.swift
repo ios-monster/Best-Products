@@ -102,14 +102,3 @@ class FavouriteTableViewCell: UITableViewCell {
 
 
 
-
-
-
-
-
-
-
-
-
-
-

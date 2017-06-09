@@ -11,7 +11,6 @@ import FirebaseAuth
 import FirebaseDatabase
 import SCLAlertView
 
-
 class CommentTableVC: UITableViewController {
   
   var product:Product?
@@ -80,32 +79,4 @@ extension CommentTableVC: NewCommentDelegate {
     })
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

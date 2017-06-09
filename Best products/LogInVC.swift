@@ -47,14 +47,14 @@ class LogInVC: UIViewController {
           if let errCode = FIRAuthErrorCode(rawValue: (error?._code)!) {
             switch errCode {
             case .errorCodeEmailAlreadyInUse:
-              print("email already in use")
-              let _ : SCLAlertViewResponder = SCLAlertView().showError("email already in use", subTitle: "")
+              print("Email already in use")
+              let _ : SCLAlertViewResponder = SCLAlertView().showError("Email already in use", subTitle: "")
             case .errorCodeInvalidEmail:
-              print("invalid email")
-              let _ : SCLAlertViewResponder = SCLAlertView().showError("invalid email", subTitle: "")
+              print("Invalid email")
+              let _ : SCLAlertViewResponder = SCLAlertView().showError("Invalid email", subTitle: "")
             case .errorCodeWrongPassword:
-              print("wrong password")
-              let _ : SCLAlertViewResponder = SCLAlertView().showError("wrong password", subTitle: "")
+              print("Wrong password")
+              let _ : SCLAlertViewResponder = SCLAlertView().showError("Wrong password", subTitle: "")
             default: break
             }
           }
@@ -79,27 +79,4 @@ class LogInVC: UIViewController {
   
   
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

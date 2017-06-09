@@ -160,7 +160,7 @@ class ProfileVC: UIViewController {
       self.profileImage.isHidden = true
       self.separatorLine.isHidden = true
       self.noUserView.isHidden = false
-
+      
       
     }else {
       // User signed in
@@ -188,56 +188,9 @@ class ProfileVC: UIViewController {
     let widthConstraint = NSLayoutConstraint(item: noUserView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 200)
     let heightConstraint = NSLayoutConstraint(item: noUserView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 200)
     let horizontalConstraint = NSLayoutConstraint(item: noUserView, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1, constant: 0)
-    let verticalConstraint = NSLayoutConstraint(item: noUserView, attribute: .top, relatedBy: .equal, toItem: view, attribute: .topMargin, multiplier: 1, constant: 100)
+    let verticalConstraint = NSLayoutConstraint(item: noUserView, attribute: .top, relatedBy: .equal, toItem: view, attribute: .topMargin, multiplier: 1, constant: 80)
     view.addConstraints([horizontalConstraint,verticalConstraint, widthConstraint,heightConstraint])
-  } 
+  }
 }
-
-//public func setTodatabase() {
-//
-//  let networkingService = NetworkingService()
-//
-//  let macBookPro = BProduct(title: "13-inch MacBook Pro - Space Gray", descrpiption: "Touch Bar and Touch ID2.9GHz dual-core Intel Core i5 processor, Turbo Boost up to 3.3GHz8GB 2133MHz memory256GB PCIe-based SSD Intel Iris Graphics 550 Four Thunderbolt 3 ports Backlit Keyboard (English) & User's Guide", mainImageUrl: "https://firebasestorage.googleapis.com/v0/b/best-products.appspot.com/o/ProductsImages%2Fmac%20book%20pro%202016%2Fmac%20pro.png?alt=media&token=a15dd2d3-ae08-4dfa-8bda-960f9c05babb", otherImagesUrls: ["https://firebasestorage.googleapis.com/v0/b/best-products.appspot.com/o/ProductsImages%2Fmac%20book%20pro%202016%2Fmac%20pro.png?alt=media&token=a15dd2d3-ae08-4dfa-8bda-960f9c05babb", "https://firebasestorage.googleapis.com/v0/b/best-products.appspot.com/o/ProductsImages%2Fmac%20book%20pro%202016%2FImage%201.png?alt=media&token=5c519a52-ba0b-412b-8db9-2cbe9d9fc6e9", "https://firebasestorage.googleapis.com/v0/b/best-products.appspot.com/o/ProductsImages%2Fmac%20book%20pro%202016%2FImage%203.png?alt=media&token=627771f1-2879-4d27-bd6a-43b72cce6c0a"], price: 1899.0, previousPrice: 2100.0, averageRating: 4.9, estimatedShipping: 80.0, tax: 20.0, newproduct: true, hotProduct: true, productOnSale: true)
-//
-//    let firstComment = BComment(text: "Very big price(", toProduct: "iphone6sSpaceGrey", addedByUser: "tom22f", dateAdded: Date(), rating: 3.0)
-//    let secondComment = BComment(text: "Very cool product, low price, fast shipping", toProduct: "iphone6sSpaceGrey", addedByUser: "alex11", dateAdded: Date(), rating: 5.0)
-//
-//  let uuid = UUID().uuidString
-//
-//
-//  //
-//  networkingService.databaseRef.child("Products").child("macBookPro13Inch").child("comments").child(uuid).setValue(secondComment.toAnyObject())
-//
-////      networkingService.databaseRef.child("Products").child("macBookPro13Inch").setValue(macBookPro.toAnyObject())
-//
-//}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 

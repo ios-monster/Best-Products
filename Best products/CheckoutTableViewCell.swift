@@ -15,7 +15,6 @@ protocol DeleteProductFromBasket{
   func deleteProduct(cell:UITableViewCell)
 }
 
-
 class CheckoutProductCell: UITableViewCell {
   
   var currentUser:String {

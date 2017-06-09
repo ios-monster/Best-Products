@@ -41,7 +41,7 @@ class ResetPasswordVC: UIViewController {
           if let errCode = FIRAuthErrorCode(rawValue: (error?._code)!) {
             switch errCode {
             case .errorCodeInvalidEmail:
-              let _ : SCLAlertViewResponder = SCLAlertView().showError("invalid email", subTitle: "")
+              let _ : SCLAlertViewResponder = SCLAlertView().showError("Invalid email", subTitle: "")
             case .errorCodeUserNotFound:
               let _ : SCLAlertViewResponder = SCLAlertView().showError("User not found", subTitle: "")
             default: break
