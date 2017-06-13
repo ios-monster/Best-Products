@@ -127,17 +127,6 @@ class ProductListTableVC: UITableViewController,BWWalkthroughViewControllerDeleg
   
   private func updateUI() {
     self.tableView.reloadData()
-//    FIRAuth.auth()?.addStateDidChangeListener({ (auth, user) in
-//      if user != nil {
-//        DispatchQueue.main.async {
-//          self.tableView.reloadData()
-//        }
-//      }else {
-//        DispatchQueue.main.async {
-//          self.tableView.reloadData()
-//        }
-//      }
-//    })
   }
 }
 
